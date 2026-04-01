@@ -8,10 +8,10 @@ function BeversWelpenScouts() {
             <div id="body-explanation">
                 <div className="button-row">
                     <button className="nav-button active" id="uitleg-button">Uitleg</button>
-                    <button className="nav-button" onClick={() => navigate("/Taak-1")}>Taak 1</button>
-                    <button className="nav-button" onClick={() => navigate("/Taak-2")}>Taak 2</button>
-                    <button className="nav-button" onClick={() => navigate("/Taak-3")}>Taak 3</button>
-                    <button className="nav-button" onClick={() => navigate("/Score")}>Score</button>
+                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-1")}>Taak 1</button>
+                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-2")}>Taak 2</button>
+                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-3")}>Taak 3</button>
+                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/score")}>Score</button>
                 </div>
                 <div id="container-explanation">
 
