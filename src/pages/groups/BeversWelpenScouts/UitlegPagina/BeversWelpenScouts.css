@@ -1,18 +1,13 @@
 /* Hide scrollbar */
-html {
+html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1A368D;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
 }
@@ -20,20 +15,16 @@ body::-webkit-scrollbar {
 #background-explanation {
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    background-color: #ffffff;
+    background-color: #1A368D;
 
     width: 100%;
     min-height: 100vh;
     padding: 20px;
-
-    overflow-y: hidden;
 }
 
 #container-explanation {
     width: 100%;
-    max-width: 1445px;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 5px;
@@ -43,9 +34,28 @@ body::-webkit-scrollbar {
 #body-explanation {
     background-color: #1A368D;
     width: 100%;
-    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 17px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.home-button {
+    background: none;
+    border: none;
+    color: #ffd549;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.home-button:hover {
+    color: #ffffff;
 }
 
 .button-row {

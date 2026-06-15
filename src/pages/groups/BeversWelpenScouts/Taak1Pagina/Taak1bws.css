@@ -1,18 +1,13 @@
 /* Hide scrollbar */
-html {
+html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1A368D;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
 }
@@ -20,20 +15,16 @@ body::-webkit-scrollbar {
 #background-explanation {
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    background-color: #ffffff;
+    background-color: #1A368D;
 
     width: 100%;
     min-height: 100vh;
     padding: 20px;
-
-    overflow-y: hidden;
 }
 
 #container-explanation {
     width: 100%;
-    max-width: 1445px;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 5px;
@@ -43,9 +34,28 @@ body::-webkit-scrollbar {
 #body-explanation {
     background-color: #1A368D;
     width: 100%;
-    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 17px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.home-button {
+    background: none;
+    border: none;
+    color: #ffd549;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.home-button:hover {
+    color: #ffffff;
 }
 
 .button-row {
@@ -167,6 +177,78 @@ body::-webkit-scrollbar {
     list-style-position: inside;
 }
 
+.title-subtitle {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    color: #ffffff;
+}
+
+.task-group {
+    background-color: #0f2e7b;
+    border: 3px solid #2c5cd6;
+    border-radius: 4px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 6px 0;
+}
+
+.task-row + .task-row {
+    border-top: 1px solid #2c5cd6;
+}
+
+.score-input {
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    border: 2px solid #2c5cd6;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #1A368D;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.score-input:focus {
+    outline: none;
+    border-color: #ffd549;
+}
+
+.task-text {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.next-button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.next-button {
+    background-color: #0f2e7b;
+    color: white;
+    border: 3px solid #2c5cd6;
+    border-radius: 25px;
+    padding: 12px 40px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
 .button-row {
     text-align: center;
     margin-top: 10px;
@@ -174,6 +256,75 @@ body::-webkit-scrollbar {
 
 .next-button:hover {
     background-color: #14307d;
+    border-color: #ffd549;
+}
+
+.warning-message {
+    background-color: #ffd549;
+    color: #1A368D;
+    font-family: monospace;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.score-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.score-card {
+    background-color: #0f2e7b;
+    border: 3px solid #2c5cd6;
+    border-radius: 4px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.score-card.total {
+    border-color: #ffd549;
+    background-color: #1a3f99;
+}
+
+.score-label {
+    color: #ffd549;
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    min-width: 70px;
+}
+
+.score-sublabel {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 0.85rem;
+    flex: 1;
+    opacity: 0.8;
+}
+
+.score-value {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    min-width: 80px;
+    text-align: right;
+}
+
+.score-card.total .score-label {
+    font-size: 1.4rem;
+}
+
+.score-card.total .score-value {
+    font-size: 1.6rem;
+    color: #ffd549;
 }
 
 @media (max-width: 900px) {

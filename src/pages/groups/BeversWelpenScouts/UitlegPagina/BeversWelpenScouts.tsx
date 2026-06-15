@@ -6,6 +6,7 @@ function BeversWelpenScouts() {
     return (
         <div id="background-explanation">
             <div id="body-explanation">
+                <button className="home-button" onClick={() => navigate("/")}>&#8592; Homepagina</button>
                 <div className="button-row">
                     <button className="nav-button active" id="uitleg-button">Uitleg</button>
                     <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-1")}>Taak 1</button>
