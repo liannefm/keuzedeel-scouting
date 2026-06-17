@@ -1,19 +1,11 @@
-import { useNavigate } from 'react-router-dom';
-import './BeversWelpenScouts.css';
+import NavBar from '../../../../components/NavBar';
+import '../../../../components/shared.css';
 
 function BeversWelpenScouts() {
-    const navigate = useNavigate();
     return (
         <div id="background-explanation">
             <div id="body-explanation">
-                <button className="home-button" onClick={() => navigate("/")}>&#8592; Homepagina</button>
-                <div className="button-row">
-                    <button className="nav-button active" id="uitleg-button">Uitleg</button>
-                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-1")}>Taak 1</button>
-                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-2")}>Taak 2</button>
-                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/taak-3")}>Taak 3</button>
-                    <button className="nav-button" onClick={() => navigate("/bevers-welpen-scouts/score")}>Score</button>
-                </div>
+                <NavBar groupBase="/bevers-welpen-scouts" activePage="uitleg" />
                 <div id="container-explanation">
 
                     <div className="title-block">
@@ -39,7 +31,7 @@ function BeversWelpenScouts() {
                             <p>De schaal is als volgt: wanneer je ervaart, maar het nog nooit hebt gebruikt en het wel aan een ander kan uitleggen, score 2.</p>
                             <p>Deze meting is bedoeld om te kijken welke onderdelen je al denkt te beheersen en welke je denkt te kunnen verbeteren.</p>
                             <p>Als je alle onderdelen hebt ingevuld, is op het laatste tabblad "Score" te zien wat je score is.</p>
-                            <p>Er zal dan duidelijk worden welk thema’s in meer of minder mate aandacht nodig hebben.</p>
+                            <p>Er zal dan duidelijk worden welk thema's in meer of minder mate aandacht nodig hebben.</p>
                             <p>Hierop zullen verdere workshops en gesprekken met je praktijkbegeleider afgestemd worden.</p>
                             <p>Beantwoord de vragen zo eerlijk mogelijk. Er bestaat geen goed of fout, je kunt er enkel van leren!</p>
                         </div>
@@ -56,9 +48,6 @@ function BeversWelpenScouts() {
                         </div>
                     </div>
 
-                    {/* <div className="button-row">
-                        <a className="next-button" href="#">Volgende →</a>
-                    </div> */}
                 </div>
             </div>
         </div>
